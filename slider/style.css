@@ -1,0 +1,94 @@
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sliderbar {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  width: 100%;
+}
+.sidebar {
+  height: 100%;
+  width: 30%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.sidebar > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 35px;
+  color: #fff;
+}
+.sidebar h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+    margin-top: -30px;
+}
+.main-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 70%;
+  transition: transform 0.5s ease-in-out;
+}
+.main-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+button:hover {
+  color: #222;
+}
+button:focus {
+  outline: none;
+}
+.sliderbar .controls button {
+  position: absolute;
+  right: 27.7%;
+  top: 50%;
+  z-index: 100;
+}
+.sliderbar .controls .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.sliderbar .controls .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.sidebar .sidebar-first-area{
+  background: linear-gradient(229.99deg, #0036ff -26%, #000218 145%);
+}
+.sidebar .sidebar-second-area{
+  background: linear-gradient(215.32deg, #8f0119 -1%, #cc093d 124%);
+}
+.sidebar .sidebar-third-area{
+  background: linear-gradient(229.99deg, #55d418 -26%, #2a8b09 145%);
+}
+@media (max-width: 768px) {
+  .sidebar h1 {
+   font-size: 32px;
+  }  
+}
